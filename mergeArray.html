@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function mergeArray(arr1, arr2){
+            let mergeArray = [...new Set([...arr1, ...arr2])].sort((a, b) => a - b);
+
+            return mergeArray;
+        }
+        // console.log(mergeArray( [1,2,3,4,5], [4,5,6,7]));
+
+        function mergeArray_same(arr1, arr2) {
+            let mergeArray = [...arr1, ...arr2].sort((a, b) => a - b)
+            const set = new Set(mergeArray);
+            return mergeArray
+        }
+        console.log(mergeArray( [1,2,3,4,5], [4,5,6,7]));
+        console.log(mergeArray_same( [1,2,3,4,5], [4,5,6,7]));
+    </script>
+</body>
+
+</html>
